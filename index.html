@@ -389,26 +389,6 @@ function registrarPartida(){
         " ganó la partida"
     );
 }
-``
-    }
-
-    let perdedor =
-        ganador === jugador1
-        ? jugador2
-        : jugador1;
-
-    jugadores[ganador] += 25;
-    jugadores[perdedor] -= 25;
-
-    alert(
-        ganador +
-        " ganó la partida\n\n" +
-        "+" + 25 +
-        " puntos"
-    );
-
-    console.log(jugadores);
-}
 
 actualizarTablaGlobal();    
 </script>
