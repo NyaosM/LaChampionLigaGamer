@@ -97,15 +97,31 @@ footer{
 </header>
 
 <nav>
-<ul>
-<li>#inicioInicio</a></li>
-<li>#globalGlobal</a></li>
-<li>#lolLoL</a></li>
-<li>#csCounter</a></li>
-<li>#owOverwatch</a></li>
-<li>#mcMinecraft</a></li>
-<li>#pokemonPokémon</a></li>
-</ul>
+
+<button onclick="mostrarSeccion('inicio')">
+🏆 Inicio
+</button>
+
+<button onclick="mostrarSeccion('lol')">
+⚔️ LoL
+</button>
+
+<button onclick="mostrarSeccion('cs')">
+🔫 Counter
+</button>
+
+<button onclick="mostrarSeccion('ow')">
+⚡ Overwatch
+</button>
+
+<button onclick="mostrarSeccion('mc')">
+🏹 Minecraft
+</button>
+
+<button onclick="mostrarSeccion('pokemon')">
+🧠 Pokémon
+</button>
+
 </nav>
 
 <section id="inicio">
@@ -390,7 +406,19 @@ function registrarPartida(){
     );
 }
 
-actualizarTablaGlobal();    
+actualizarTablaGlobal();
+mostrarSeccion("inicio"); 
+
+function mostrarSeccion(id){
+
+    document.querySelectorAll("section")
+    .forEach(sec=>{
+        sec.style.display = "none";
+    });
+
+    document.getElementById(id)
+    .style.display = "block";
+}    
 </script>
 </body>
 </html>
