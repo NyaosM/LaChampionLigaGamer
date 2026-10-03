@@ -109,7 +109,66 @@ footer{
 </nav>
 
 <section id="inicio">
+<div class="card">
 
+<h2>🎮 Registrar Partida</h2>
+
+<p>Juego:</p>
+
+<select id="juego">
+    <option>League of Legends</option>
+    <option>Counter Strike 1.6</option>
+    <option>Overwatch</option>
+    <option>Minecraft PvP</option>
+    <option>Pokémon</option>
+</select>
+
+<br><br>
+
+<p>Jugador 1:</p>
+
+<select id="jugador1">
+    <option>Nyaos</option>
+    <option>Walker</option>
+    <option>Lanegrita</option>
+    <option>Ratuchin</option>
+    <option>Nosapa</option>
+    <option>Castro</option>
+</select>
+
+<br><br>
+
+<p>Jugador 2:</p>
+
+<select id="jugador2">
+    <option>Nyaos</option>
+    <option>Walker</option>
+    <option>Lanegrita</option>
+    <option>Ratuchin</option>
+    <option>Nosapa</option>
+    <option>Castro</option>
+</select>
+
+<br><br>
+
+<p>Ganador:</p>
+
+<select id="ganador">
+    <option>Nyaos</option>
+    <option>Walker</option>
+    <option>Lanegrita</option>
+    <option>Ratuchin</option>
+    <option>Nosapa</option>
+    <option>Castro</option>
+</select>
+
+<br><br>
+
+<button onclick="registrarPartida()">
+Registrar Partida
+</button>
+
+</div>
 <div class="card">
 <h2>👑 Campeón Actual</h2>
 <p>Nyaos (de momento...)</p>
@@ -241,6 +300,51 @@ footer{
 <footer>
 La Champion Liga Gamer ©
 </footer>
+<script>
 
+const jugadores = {
+    Nyaos: 5000,
+    Walker: 5000,
+    Lanegrita: 5000,
+    Ratuchin: 5000,
+    Nosapa: 5000,
+    Castro: 5000
+};
+
+function registrarPartida(){
+
+    const jugador1 =
+        document.getElementById("jugador1").value;
+
+    const jugador2 =
+        document.getElementById("jugador2").value;
+
+    const ganador =
+        document.getElementById("ganador").value;
+
+    if(jugador1 === jugador2){
+        alert("Los jugadores deben ser distintos");
+        return;
+    }
+
+    let perdedor =
+        ganador === jugador1
+        ? jugador2
+        : jugador1;
+
+    jugadores[ganador] += 25;
+    jugadores[perdedor] -= 25;
+
+    alert(
+        ganador +
+        " ganó la partida\n\n" +
+        "+" + 25 +
+        " puntos"
+    );
+
+    console.log(jugadores);
+}
+
+</script>
 </body>
 </html>
