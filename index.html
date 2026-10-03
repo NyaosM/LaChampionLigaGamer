@@ -340,6 +340,11 @@ let jugadores = {
         global: 5000,
         lol: 1000
     }
+const guardado = localStorage.getItem("ligaGamer");
+
+if(guardado){
+    jugadores = JSON.parse(guardado);
+}    
 };
     
 function actualizarTablaGlobal(){
@@ -397,6 +402,11 @@ function registrarPartida(){
 
     jugadores[ganador].global += 25;
     jugadores[perdedor].global -= 25;
+
+    localStorage.setItem(
+    "ligaGamer",
+    JSON.stringify(jugadores)
+);
 
     actualizarTablaGlobal();
 
