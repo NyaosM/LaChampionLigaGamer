@@ -3,37 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>La Champion Liga Gamer</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    background:#121212;
+    background:#111;
     color:white;
     font-family:Arial,sans-serif;
-    margin:0;
 }
 
 header{
-    background:#1f1f1f;
+    background:#1a1a1a;
+    padding:25px;
     text-align:center;
-    padding:30px;
 }
 
-h1{
-    color:#ffd700;
+header h1{
+    color:gold;
 }
 
-.container{
-    max-width:900px;
+nav{
+    background:#222;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    max-width:1000px;
     margin:auto;
-    padding:20px;
+    padding:40px 20px;
 }
 
 .card{
-    background:#222;
+    background:#1f1f1f;
     padding:20px;
-    border-radius:12px;
-    margin-bottom:20px;
+    border-radius:15px;
+    margin-bottom:25px;
 }
 
 table{
@@ -41,22 +68,23 @@ table{
     border-collapse:collapse;
 }
 
+th{
+    background:#333;
+}
+
 th,td{
     padding:12px;
     text-align:center;
-}
-
-th{
-    background:#333;
 }
 
 tr:nth-child(even){
     background:#2a2a2a;
 }
 
-.gold{
-    color:gold;
-    font-weight:bold;
+footer{
+    text-align:center;
+    padding:25px;
+    color:#aaa;
 }
 </style>
 </head>
@@ -65,73 +93,154 @@ tr:nth-child(even){
 
 <header>
 <h1>🏆 La Champion Liga Gamer 🏆</h1>
-<p>La verdad absoluta sobre quién es el mejor gamer.</p>
+<p>La lucha eterna por demostrar quién es el verdadero gamer.</p>
 </header>
 
-<div class="container">
+<nav>
+<ul>
+<li>#inicioInicio</a></li>
+<li>#globalGlobal</a></li>
+<li>#lolLoL</a></li>
+<li>#csCounter</a></li>
+<li>#owOverwatch</a></li>
+<li>#mcMinecraft</a></li>
+<li>#pokemonPokémon</a></li>
+</ul>
+</nav>
+
+<section id="inicio">
 
 <div class="card">
-<h2>Ranking General</h2>
+<h2>👑 Campeón Actual</h2>
+<p>Nyaos (de momento...)</p>
+</div>
+
+<div class="card">
+<h2>🎮 Jugadores</h2>
+
+<ul>
+<li>Nyaos</li>
+<li>Walker</li>
+<li>Lanegrita</li>
+<li>Ratuchin</li>
+<li>Nosapa</li>
+<li>Castro</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="global">
+
+<div class="card">
+
+<h2>🌎 Ranking Global</h2>
 
 <table>
+
 <tr>
 <th>Puesto</th>
 <th>Jugador</th>
-<th>Elo</th>
+<th>Puntos</th>
 </tr>
 
-<tr>
-<td>🥇</td>
-<td>Nyaos</td>
-<td>1000</td>
-</tr>
-
-<tr>
-<td>🥈</td>
-<td>Walker</td>
-<td>1000</td>
-</tr>
-
-<tr>
-<td>🥉</td>
-<td>Lanegrita</td>
-<td>1000</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>Ratuchin</td>
-<td>1000</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td>Nosapa</td>
-<td>1000</td>
-</tr>
-
-<tr>
-<td>6</td>
-<td>Castro</td>
-<td>1000</td>
-</tr>
+<tr><td>🥇</td><td>Nyaos</td><td>5000</td></tr>
+<tr><td>🥈</td><td>Walker</td><td>5000</td></tr>
+<tr><td>🥉</td><td>Lanegrita</td><td>5000</td></tr>
+<tr><td>4</td><td>Ratuchin</td><td>5000</td></tr>
+<tr><td>5</td><td>Nosapa</td><td>5000</td></tr>
+<tr><td>6</td><td>Castro</td><td>5000</td></tr>
 
 </table>
-</div>
 
+</div>
+</section>
+
+<section id="lol">
 <div class="card">
-<h2>Juegos Oficiales</h2>
+<h2>⚔️ League of Legends 1v1</h2>
 
-<ul>
-<li>🎮 League of Legends 1v1</li>
-<li>🔫 Counter Strike 1.6</li>
-<li>⚡ Overwatch</li>
-<li>⚔️ Minecraft PvP</li>
-<li>🧠 Pokémon Competitivo</li>
-</ul>
-</div>
+<table>
+<tr><th>Jugador</th><th>ELO</th></tr>
+<tr><td>Nyaos</td><td>1000</td></tr>
+<tr><td>Walker</td><td>1000</td></tr>
+<tr><td>Lanegrita</td><td>1000</td></tr>
+<tr><td>Ratuchin</td><td>1000</td></tr>
+<tr><td>Nosapa</td><td>1000</td></tr>
+<tr><td>Castro</td><td>1000</td></tr>
+</table>
 
 </div>
+</section>
+
+<section id="cs">
+<div class="card">
+<h2>🔫 Counter Strike 1.6</h2>
+
+<table>
+<tr><th>Jugador</th><th>ELO</th></tr>
+<tr><td>Nyaos</td><td>1000</td></tr>
+<tr><td>Walker</td><td>1000</td></tr>
+<tr><td>Lanegrita</td><td>1000</td></tr>
+<tr><td>Ratuchin</td><td>1000</td></tr>
+<tr><td>Nosapa</td><td>1000</td></tr>
+<tr><td>Castro</td><td>1000</td></tr>
+</table>
+</div>
+</section>
+
+<section id="ow">
+<div class="card">
+<h2>⚡ Overwatch</h2>
+
+<table>
+<tr><th>Jugador</th><th>ELO</th></tr>
+<tr><td>Nyaos</td><td>1000</td></tr>
+<tr><td>Walker</td><td>1000</td></tr>
+<tr><td>Lanegrita</td><td>1000</td></tr>
+<tr><td>Ratuchin</td><td>1000</td></tr>
+<tr><td>Nosapa</td><td>1000</td></tr>
+<tr><td>Castro</td><td>1000</td></tr>
+</table>
+</div>
+</section>
+
+<section id="mc">
+<div class="card">
+<h2>🏹 Minecraft PvP</h2>
+
+<table>
+<tr><th>Jugador</th><th>ELO</th></tr>
+<tr><td>Nyaos</td><td>1000</td></tr>
+<tr><td>Walker</td><td>1000</td></tr>
+<tr><td>Lanegrita</td><td>1000</td></tr>
+<tr><td>Ratuchin</td><td>1000</td></tr>
+<tr><td>Nosapa</td><td>1000</td></tr>
+<tr><td>Castro</td><td>1000</td></tr>
+</table>
+</div>
+</section>
+
+<section id="pokemon">
+<div class="card">
+<h2>🧠 Pokémon Competitivo</h2>
+
+<table>
+<tr><th>Jugador</th><th>ELO</th></tr>
+<tr><td>Nyaos</td><td>1000</td></tr>
+<tr><td>Walker</td><td>1000</td></tr>
+<tr><td>Lanegrita</td><td>1000</td></tr>
+<tr><td>Ratuchin</td><td>1000</td></tr>
+<tr><td>Nosapa</td><td>1000</td></tr>
+<tr><td>Castro</td><td>1000</td></tr>
+</table>
+</div>
+</section>
+
+<footer>
+La Champion Liga Gamer ©
+</footer>
 
 </body>
 </html>
