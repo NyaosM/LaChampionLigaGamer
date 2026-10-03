@@ -204,12 +204,9 @@ Registrar Partida
 <th>Puntos</th>
 </tr>
 
-<tr><td>🥇</td><td>Nyaos</td><td>5000</td></tr>
-<tr><td>🥈</td><td>Walker</td><td>5000</td></tr>
-<tr><td>🥉</td><td>Lanegrita</td><td>5000</td></tr>
-<tr><td>4</td><td>Ratuchin</td><td>5000</td></tr>
-<tr><td>5</td><td>Nosapa</td><td>5000</td></tr>
-<tr><td>6</td><td>Castro</td><td>5000</td></tr>
+<tbody id="tablaGlobal">
+</tbody>
+
 
 </table>
 
@@ -302,14 +299,64 @@ La Champion Liga Gamer ©
 </footer>
 <script>
 
-const jugadores = {
-    Nyaos: 5000,
-    Walker: 5000,
-    Lanegrita: 5000,
-    Ratuchin: 5000,
-    Nosapa: 5000,
-    Castro: 5000
+let jugadores = {
+    Nyaos: {
+        global: 5000,
+        lol: 1000
+    },
+    Walker: {
+        global: 5000,
+        lol: 1000
+    },
+    Lanegrita: {
+        global: 5000,
+        lol: 1000
+    },
+    Ratuchin: {
+        global: 5000,
+        lol: 1000
+    },
+    Nosapa: {
+        global: 5000,
+        lol: 1000
+    },
+    Castro: {
+        global: 5000,
+        lol: 1000
+    }
 };
+    
+function actualizarTablaGlobal(){
+
+    const tabla =
+        document.getElementById("tablaGlobal");
+
+    tabla.innerHTML = "";
+
+    const ranking =
+        Object.entries(jugadores)
+        .sort(
+            (a,b)=>
+            b[1].global - a[1].global
+        );
+
+    ranking.forEach((jugador,index)=>{
+
+        let medalla = index + 1;
+
+        if(index === 0) medalla = "🥇";
+        if(index === 1) medalla = "🥈";
+        if(index === 2) medalla = "🥉";
+
+        tabla.innerHTML += `
+        <tr>
+            <td>${medalla}</td>
+            <td>${jugador[0]}</td>
+            <td>${jugador[1].global}</td>
+        </tr>
+        `;
+    });
+}
 
 function registrarPartida(){
 
@@ -325,6 +372,24 @@ function registrarPartida(){
     if(jugador1 === jugador2){
         alert("Los jugadores deben ser distintos");
         return;
+    }
+
+    let perdedor =
+        ganador === jugador1
+        ? jugador2
+        : jugador1;
+
+    jugadores[ganador].global += 25;
+    jugadores[perdedor].global -= 25;
+
+    actualizarTablaGlobal();
+
+    alert(
+        ganador +
+        " ganó la partida"
+    );
+}
+``
     }
 
     let perdedor =
